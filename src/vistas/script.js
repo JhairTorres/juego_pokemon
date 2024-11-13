@@ -91,7 +91,7 @@ async function capturarPokemon(pokemonId) {
     };
 
     try {
-        const response = await fetch('http://3.145.30.157:3005/api/captura/capturar', {
+        const response = await fetch('http://3.145.30.157:3007/api/captura/capturar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -123,7 +123,7 @@ async function capturarPokemon(pokemonId) {
 
 async function actualizarTablaCapturas() {
     try {
-        const response = await fetch('http://3.145.30.157:3005/api/captura/listar');  // Suponiendo que la API devuelva las capturas
+        const response = await fetch('http://3.145.30.157:3007/api/captura/listar');  // Suponiendo que la API devuelva las capturas
         const capturas = await response.json();
 
         if (!response.ok) {
